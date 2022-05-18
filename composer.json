@@ -18,5 +18,6 @@
     },
     "extra": {
         "class": "ComposerOverrideFiles\\Plugin"
-    }
+    },
+    "minimum-stability": "stable"
 }
