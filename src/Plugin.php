@@ -74,6 +74,10 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 
     public function preAutoloadDump()
     {
+        if (empty($this->extraConfig)) {
+            return;
+        }
+
         $this->validate();
 
         $overrideFiles = OverrideFile::getOverrideFiles($this->composer, $this->io, $this->getConfig('path'), $this->getConfig('base_vendor_dir'));
