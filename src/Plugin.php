@@ -85,8 +85,8 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         $autoloads = $this->composer->getPackage()->getAutoload();
 
         foreach ($overrideFiles as $overrideFile) {
-            $autoloads['exclude-from-classmap'][] = $overrideFile->getVendorFile();
-            $autoloads['files'][] = $overrideFile->getOverrideFile();
+            $autoloads['exclude-from-classmap'][] = $overrideFile->getVendorFile(true);
+            $autoloads['files'][] = $overrideFile->getOverrideFile(true);
 
             $this->io->write("Overrided file: <info>{$overrideFile->getVendorFile(true)}</info> => <info>{$overrideFile->getOverrideFile(true)}</info>");
         }
