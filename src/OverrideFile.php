@@ -65,7 +65,7 @@ class OverrideFile
     public function getOverrideFile($short = false)
     {
         if ($short) {
-            return str_replace($this->rootPath, '', $this->overrideFile);
+            return ltrim(str_replace($this->rootPath, '', $this->overrideFile), '/');
         }
 
         return $this->overrideFile;
@@ -77,7 +77,7 @@ class OverrideFile
     public function getVendorFile($short = false)
     {
         if ($short) {
-            return str_replace($this->rootPath, '', $this->vendorFile);
+            return ltrim(str_replace($this->rootPath, '', $this->vendorFile), '/');
         }
 
         return $this->vendorFile;
