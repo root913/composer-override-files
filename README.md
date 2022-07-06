@@ -36,7 +36,7 @@ example composer.json
 | base_vendor_dir       | Override root vendor directory where plugin will search for files         |
 | generate_origin_file  | If true will generate original file with "Origin" suffix for inheritance  |
 
-## Debugowanie
+## Debugging
 
 To debug output autoload object execute:
 ```bash
