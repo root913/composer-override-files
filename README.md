@@ -43,4 +43,4 @@ To debug output autoload object execute:
 composer dumpautoload -vvv
 ```
 
-## [Examples](examples/README.md)
+## [Examples](examples)
