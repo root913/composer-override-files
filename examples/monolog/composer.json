@@ -1,0 +1,28 @@
+{
+    "name": "root/monolog",
+    "require": {
+        "monolog/monolog": "^2.6",
+        "root913/composer-override-files": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "extra": {
+        "override_files": {
+            "path": "overrides",
+            "generate_origin_file": true,
+            "base_vendor_dir": "monolog/monolog/src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "root913/composer-override-files": true
+        }
+    }
+}
